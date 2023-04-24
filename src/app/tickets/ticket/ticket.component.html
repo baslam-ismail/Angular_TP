@@ -3,6 +3,9 @@
   <h3>Titre : {{ticket.title}}</h3>
   <i class="fas fa-calendar-alt"></i> {{ticket.date | date: 'shortTime'}} &nbsp;&nbsp;
   <i class="far fa-user"></i> {{ticket.student}}<br>
+  <i class="fas fa-project-diagram" *ngIf="ticket.major === 'SI'"></i>
+  <i class="fas fa-bolt" *ngIf="ticket.major === 'GE'"></i>
+  <i class="fas fa-dna" *ngIf="ticket.major === 'GB'"></i>
   {{ticket.major}}
 
 </div>
