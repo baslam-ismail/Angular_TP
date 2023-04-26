@@ -3,8 +3,15 @@
 .ticket {
   width: 100%;
   background-color: red;
+  position: relative;
 }
 
 .ticket:hover {
   cursor: pointer;
+}
+
+.btn{
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
 }
