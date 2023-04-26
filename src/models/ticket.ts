@@ -3,6 +3,13 @@ export interface Ticket {
   description?: string;
   date?: Date;
   student?: string;
-  major?: string;
+  major?: Major;
   
+}
+
+export enum Major {
+  SI = "SI",
+  GE = "GE",
+  GB = "GB",
+
 }

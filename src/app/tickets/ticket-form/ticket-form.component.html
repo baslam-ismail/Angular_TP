@@ -12,7 +12,13 @@
   <br>
   <label for="major">
     Filière <br>
-    <input class="input-custom" type="text" id="major" [formControlName]="'major'">
+    <!-- <input class="input-custom" type="text" id="major" [formControlName]="'major'"> -->
+    <select  class="input-custom" name="major-field" id="major" [formControlName]="'major'">
+      <option *ngFor="let filiere of FILIERE_LIST" [value]="filiere">
+        {{ filiere }}
+      </option>
+
+    </select>
   </label>
   <br>
   <button type="submit" class="btn-custom" (click)="addTicket()">Create</button>
