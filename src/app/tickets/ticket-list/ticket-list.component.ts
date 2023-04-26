@@ -10,9 +10,11 @@ import { Ticket } from '../../../models/ticket';
 export class TicketListComponent implements OnInit {
 
   public ticketList: Ticket[] = [];
+  displayTicketArchived : boolean = false;
 
   constructor(public ticketService: TicketService) {
     this.ticketService.tickets$.subscribe((tickets) => this.ticketList = tickets);
+
   }
 
   ngOnInit() {
@@ -25,6 +27,14 @@ export class TicketListComponent implements OnInit {
   ticketDeleted(ticket: Ticket) {
     this.ticketService.deleteTicket(ticket);
    
+  }
+
+  filterTickets() {
+    if (this.displayTicketArchived) {
+      return this.ticketList.filter(ticket => ticket.archived);
+    } else {
+      return this.ticketList.filter(ticket => !ticket.archived);
+    }
   }
 
 }

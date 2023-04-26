@@ -1,5 +1,11 @@
+
+
 <div class="ticket-list">
-  <div class="ticket" *ngFor="let ticket of ticketList">
+  
+  <button (click)="displayTicketArchived = !displayTicketArchived">
+    {{ displayTicketArchived ? 'Hide archived tickets' : 'Show archived tickets' }}
+  </button>
+  <div class="ticket" *ngFor="let ticket of filterTickets()">
       <!--Inputs & Output allow communication between parent & child components.-->
       <!--More information: https://angular.io/guide/component-interaction-->
       <app-ticket 

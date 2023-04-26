@@ -9,6 +9,7 @@ export const TICKETS_MOCKED: Ticket[] = [
     date: dateToday,
     student: 'Paul',
     major: Major.GE,
+    archived: false,
   },
   {
     title: 'SI5 in Paris -- Modified',
@@ -16,5 +17,15 @@ export const TICKETS_MOCKED: Ticket[] = [
     date: dateToday,
     student: 'Anakin',
     major: Major.SI,
+    archived: false,
+  },
+
+  {
+    title: '  TEST',
+    description: 'Decs',
+    date: dateToday,
+    student: 'Baslam',
+    major: Major.SI,
+    archived: true,
   },
 ];
